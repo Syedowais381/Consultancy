@@ -1,9 +1,11 @@
 package com.consultancy;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class ConsultancyApplication {
-
-	public ConsultancyApplication() {
-		// TODO Auto-generated constructor stub
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(ConsultancyApplication.class, args);
+    }
 }
