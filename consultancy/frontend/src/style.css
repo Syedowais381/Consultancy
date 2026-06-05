@@ -135,7 +135,7 @@ p {
   transform: translateY(-2px);
 }
 
-.admin-btn {
+.nav-cta {
   padding: 0.5rem 1.2rem;
   background: linear-gradient(135deg, #ffd700, #ffed4e);
   color: #004080;
@@ -149,7 +149,7 @@ p {
   font-size: 0.9rem;
 }
 
-.admin-btn::before {
+.nav-cta::before {
   content: '';
   position: absolute;
   top: 0;
@@ -160,11 +160,11 @@ p {
   transition: left 0.5s ease;
 }
 
-.admin-btn:hover::before {
+.nav-cta:hover::before {
   left: 100%;
 }
 
-.admin-btn:hover {
+.nav-cta:hover {
   background: linear-gradient(135deg, #e6c200, #ffd700);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
@@ -303,6 +303,7 @@ p {
 }
 
 .service-btn {
+  display: inline-block;
   background: #ffd700;
   color: #004080;
   padding: 0.8rem 2rem;
@@ -314,6 +315,7 @@ p {
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 .service-btn:hover {
@@ -420,7 +422,8 @@ p {
 
 /* ====== Forms ====== */
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   width: 100%;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -432,8 +435,14 @@ p {
   font-family: inherit;
 }
 
+.contact-form select {
+  cursor: pointer;
+  color: #333;
+}
+
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form select:focus {
   outline: none;
   border-color: #004080;
   box-shadow: 0 0 0 3px rgba(0, 64, 128, 0.1);
@@ -489,6 +498,29 @@ p {
   color: green;
 }
 
+.error-note {
+  font-size: 0.9rem;
+  color: #dc2626;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #004080;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #004080;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #004080;
+  color: #fff;
+}
+
 /* ====== Contact Page ====== */
 .contact-grid {
   display: grid;
@@ -499,6 +531,48 @@ p {
 
 .contact-left p {
   margin: 0.5rem 0;
+}
+
+.contact-value-prop {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #004080;
+}
+
+.contact-value-prop h4 {
+  margin: 0 0 1rem;
+  color: #004080;
+}
+
+.contact-value-prop ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.booking-step h3 {
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.booking-intro {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.booking-fallback {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.calendly-embed {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .map-image {
@@ -798,24 +872,11 @@ p {
   padding: 3rem 0;
 }
 
-/* ====== Forms ====== */
-.auth-form {
-  max-width: 400px;
-  margin: 2rem auto;
-}
-
-.auth-form input {
-  width: 100%;
-  padding: 0.6rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
 .form-actions {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /* ====== Footer ====== */

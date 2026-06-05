@@ -1,11 +1,6 @@
 import React from "react";
 import Card from "../components/Card";
-
-const services = [
-  { id:1, title:"Project & Programme Management", desc:"End-to-end delivery and site supervision.", image:"/images/service1.jpg" },
-  { id:2, title:"Design & Engineering", desc:"Feasibility, detailed design, stress analysis.", image:"/images/service2.jpg" },
-  { id:3, title:"Technical Consultancy", desc:"Integrity assessments, hazard analysis, FEA.", image:"/images/service3.jpg" }
-];
+import { services } from "../data/portfolio";
 
 export default function Services() {
   return (
@@ -21,11 +16,13 @@ export default function Services() {
           </div>
         </div>
       </section>
-      
+
       <section className="container page-content">
         <div className="cards-grid">
           {services.map(s => (
-            <Card key={s.id} title={s.title} image={s.image}>{s.desc}</Card>
+            <Card key={s.id} title={s.name} image={s.iconUrl}>
+              {s.description}
+            </Card>
           ))}
         </div>
       </section>

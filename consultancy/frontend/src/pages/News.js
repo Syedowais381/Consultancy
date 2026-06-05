@@ -1,10 +1,6 @@
 import React from "react";
 import Card from "../components/Card";
-
-const news = [
-  { id:1, title:"New Consultancy Arm", content:"Launch of specialist consultancy for onshore pipelines.", date:"2025-09-20", image:"/images/news1.jpg" },
-  { id:2, title:"3D Visualisation Innovation", content:"Immersive 3D visualisation to improve stakeholder engagement.", date:"2025-08-11", image:"/images/news2.jpg" }
-];
+import { news } from "../data/portfolio";
 
 export default function News() {
   return (
@@ -20,11 +16,11 @@ export default function News() {
           </div>
         </div>
       </section>
-      
+
       <section className="container page-content">
         <div className="cards-grid">
           {news.map(n => (
-            <Card key={n.id} title={n.title} subtitle={n.date} image={n.image}>
+            <Card key={n.id} title={n.title} subtitle={n.publishedDate} image={n.imageUrl}>
               {n.content}
             </Card>
           ))}

@@ -26,8 +26,7 @@ export default function Navbar() {
           <NavLink to="/services">Services</NavLink>
           <NavLink to="/news">News</NavLink>
           <NavLink to="/jobs">Jobs</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
-          <Link to="/admin" className="admin-btn">Admin Login</Link>
+          <Link to="/contact" className="nav-cta">Contact Us</Link>
         </nav>
       </div>
     </header>

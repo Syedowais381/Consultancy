@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HeroSection from "../components/HeroSection";
 
 const services = [
@@ -87,7 +88,7 @@ export default function Home() {
                     <h3 className="service-title">{service.title}</h3>
                     <p className="service-subtitle">{service.subtitle}</p>
                     <p className="service-description">{service.description}</p>
-                    <button className="service-btn">Learn More</button>
+                    <Link to="/services" className="service-btn">Learn More</Link>
                   </div>
                 </div>
               </div>

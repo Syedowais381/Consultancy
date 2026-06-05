@@ -7,7 +7,6 @@ import Services from "../pages/Services";
 import News from "../pages/News";
 import Jobs from "../pages/Jobs";
 import Contact from "../pages/Contact";
-import AdminLogin from "../pages/AdminLogin";
 
 export default function AppRouter() {
   return (
@@ -18,7 +17,6 @@ export default function AppRouter() {
       <Route path="/news" element={<News />} />
       <Route path="/jobs" element={<Jobs />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/admin" element={<AdminLogin />} />
     </Routes>
   );
 }
